@@ -14,7 +14,7 @@ import rx.schedulers.Schedulers;
  * @author lidajun
  * @email solidajun@gmail.com
  * @date 2016/9/27 16:27.
- * @desc: ${todo}
+ * @desc: Utils
  */
 public class Utils {
     private static final String TAG = "Utils";

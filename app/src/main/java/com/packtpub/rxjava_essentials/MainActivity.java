@@ -1,18 +1,19 @@
 package com.packtpub.rxjava_essentials;
 
+import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v4.app.FragmentManager;
-import android.view.Menu;
-import butterknife.ButterKnife;
-import com.packtpub.rxjava_essentials.example1.FirstExampleFragment;
-import com.packtpub.rxjava_essentials.navigation_drawer.NavigationDrawerCallbacks;
-import com.packtpub.rxjava_essentials.navigation_drawer.NavigationDrawerFragment;
-
-import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import butterknife.BindView;
+import butterknife.ButterKnife;
+import com.packtpub.rxjava_essentials.example1.FirstExampleFragment;
+import com.packtpub.rxjava_essentials.example2.SecondExampleFragment;
+import com.packtpub.rxjava_essentials.example3.ThirdExampleFragment;
+import com.packtpub.rxjava_essentials.navigation_drawer.NavigationDrawerCallbacks;
+import com.packtpub.rxjava_essentials.navigation_drawer.NavigationDrawerFragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationDrawerCallbacks {
 
@@ -54,7 +55,19 @@ public class MainActivity extends AppCompatActivity implements NavigationDrawerC
         FragmentManager fragmentManager = getSupportFragmentManager();
         switch (position) {
             case 0:
-                fragmentManager.beginTransaction().replace(R.id.container, new FirstExampleFragment());
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new FirstExampleFragment())
+                        .commit();
+                break;
+            case 1:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new SecondExampleFragment())
+                        .commit();
+                break;
+            case 2:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new ThirdExampleFragment())
+                        .commit();
                 break;
         }
     }
