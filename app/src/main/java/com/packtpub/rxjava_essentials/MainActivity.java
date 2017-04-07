@@ -9,6 +9,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import com.packtpub.rxjava_essentials.chapter4.DistinctExampleFragment;
+import com.packtpub.rxjava_essentials.chapter4.FilterExampleFragment;
+import com.packtpub.rxjava_essentials.chapter4.TakeExampleFragment;
+import com.packtpub.rxjava_essentials.chapter5.GroupByExampleFragment;
+import com.packtpub.rxjava_essentials.chapter5.MapExampleFragment;
+import com.packtpub.rxjava_essentials.chapter5.ScanExampleFragment;
+import com.packtpub.rxjava_essentials.chapter6.AndThenWhenExampleFragment;
+import com.packtpub.rxjava_essentials.chapter6.CombineLatestExampleFragment;
+import com.packtpub.rxjava_essentials.chapter6.JoinExampleFragment;
+import com.packtpub.rxjava_essentials.chapter6.MergeExampleFragment;
+import com.packtpub.rxjava_essentials.chapter6.ZipExampleFragment;
 import com.packtpub.rxjava_essentials.example1.FirstExampleFragment;
 import com.packtpub.rxjava_essentials.example2.SecondExampleFragment;
 import com.packtpub.rxjava_essentials.example3.ThirdExampleFragment;
@@ -67,6 +78,61 @@ public class MainActivity extends AppCompatActivity implements NavigationDrawerC
             case 2:
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, new ThirdExampleFragment())
+                        .commit();
+                break;
+            case 3:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new FilterExampleFragment())
+                        .commit();
+                break;
+            case 4:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new TakeExampleFragment())
+                        .commit();
+                break;
+            case 5:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new DistinctExampleFragment())
+                        .commit();
+                break;
+            case 6:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new MapExampleFragment())
+                        .commit();
+                break;
+            case 7:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new ScanExampleFragment())
+                        .commit();
+                break;
+            case 8:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new GroupByExampleFragment())
+                        .commit();
+                break;
+            case 9:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new MergeExampleFragment())
+                        .commit();
+                break;
+            case 10:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new ZipExampleFragment())
+                        .commit();
+                break;
+            case 11:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new JoinExampleFragment())
+                        .commit();
+                break;
+            case 12:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new CombineLatestExampleFragment())
+                        .commit();
+                break;
+            case 13:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new AndThenWhenExampleFragment())
                         .commit();
                 break;
         }
