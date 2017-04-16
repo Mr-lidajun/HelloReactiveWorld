@@ -47,14 +47,14 @@ public class Utils {
             fOut.flush();
             fOut.close();
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         } finally {
             try {
                 if (fOut != null) {
                     fOut.close();
                 }
             } catch (IOException e) {
-                e.printStackTrace();
+                throw new RuntimeException(e);
             }
         }
     }

@@ -20,6 +20,9 @@ import com.packtpub.rxjava_essentials.chapter6.CombineLatestExampleFragment;
 import com.packtpub.rxjava_essentials.chapter6.JoinExampleFragment;
 import com.packtpub.rxjava_essentials.chapter6.MergeExampleFragment;
 import com.packtpub.rxjava_essentials.chapter6.ZipExampleFragment;
+import com.packtpub.rxjava_essentials.chapter7.LongTaskFragment;
+import com.packtpub.rxjava_essentials.chapter7.NetworkTaskFragment;
+import com.packtpub.rxjava_essentials.chapter7.SharedPreferencesListFragment;
 import com.packtpub.rxjava_essentials.example1.FirstExampleFragment;
 import com.packtpub.rxjava_essentials.example2.SecondExampleFragment;
 import com.packtpub.rxjava_essentials.example3.ThirdExampleFragment;
@@ -133,6 +136,21 @@ public class MainActivity extends AppCompatActivity implements NavigationDrawerC
             case 13:
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, new AndThenWhenExampleFragment())
+                        .commit();
+                break;
+            case 14:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new SharedPreferencesListFragment())
+                        .commit();
+                break;
+            case 15:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new LongTaskFragment())
+                        .commit();
+                break;
+            case 16:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new NetworkTaskFragment())
                         .commit();
                 break;
         }
